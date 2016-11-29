@@ -31,10 +31,15 @@ function coinCounter() {
 }
 // set the result of coinPurse to the HTML
 var ul = document.getElementById("coinPurse");
-var li = document.createElement("li");
-li.innerHTML = coinPurse;
-ul.appendChild(li);
-
+// loop through the coinPurse to get each key/property
+for (var prop in coinPurse) {
+  // create list item
+  var li = document.createElement("li");
+  // add result to list item
+  li.innerHTML = prop + ': ' + coinPurse[prop];
+  // add list item to unordered list
+  ul.appendChild(li);
+}
 // get coinInput value from user and run function
 var coinInput = document.getElementById("coinInput");
 console.log(coinInput);
