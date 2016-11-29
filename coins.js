@@ -29,7 +29,13 @@ function coinCounter() {
   }
   return coinPurse;
 }
-// get coinInput value from user
+// set the result of coinPurse to the HTML
+var ul = document.getElementById("coinPurse");
+var li = document.createElement("li");
+li.innerHTML = coinPurse;
+ul.appendChild(li);
+
+// get coinInput value from user and run function
 var coinInput = document.getElementById("coinInput");
 console.log(coinInput);
 coinCounter();
